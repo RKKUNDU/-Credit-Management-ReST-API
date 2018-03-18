@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credit Transfer</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+
+<style>
+	body{ width:100%; height:100%; background-image:url(img.jpg); background-size:cover; background-repeat:no-repeat;}
+	*{padding:0;border:0;}
+	.navbar-inverse{ background-color: transparent;border:0;border-radius:0;padding:2%;margin-bottom:0;}
+	.container{padding:0;}
+	.navbar .nav li a,.navbar .nav li a:focus{color: #F76914;font-size:1.5em;}
+	.navbar .nav li a:hover{color: #F44E0E;}
+	@media (max-width:600px)
+	{
+		.navbar-inverse{font-size:1.2em;}
+		body{ background-image:url(img_small.jpg);}
+	}
+	.container-fluid{padding:0;}
+	.jumbotron{ background-color:transparent;}
+	.jumbotron h2{color: rgba(0,0,0,0.90)}
+	.jumbotron h4{font-size:1.8em;}
+	.jumbotron span{color: red;}
+	.two{ animation-delay:.7s; -moz-animation-delay:.7s; -webkit-animation-delay:.7s}
+	.three{ animation-delay:1.4s; -webkit-animation-delay:1.4s}
+	.four{ animation-delay:2.1s; -webkit-animation-delay:2.1s}
+	.five{ animation-delay:2.8s; -webkit-animation-delay:2.8s}
+	.six{ animation-delay:3.5s ; -webkit-animation-delay:3.5s}
+	.seven{ animation-delay:4.2s; -webkit-animation-delay:4.2s}
+	.eight{ animation-delay:4.9s; -webkit-animation-delay:4.9s}
+	.nine{ animation-delay:5.6s; -webkit-animation-delay:5.6s}
+</style>
+</head>
+<body>
+<nav class=" navbar navbar-inverse">
+	<div class="container ">
+    
+    		<div class="navbar-header">
+		<button  type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar">
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        </button>    
+    </div>
+    <div class="navbar-collapse collapse " id="myNavBar">
+        <ul class="nav navbar-nav">
+            <li ><a href="index.html">Home</a></li>
+            <li ><a href="users">View Users</a></li>
+           <!-- <li><a href="transfe">Transfer Credit</a></li>-->
+             <li><a href="history">Transfer History</a></li>
+       </ul>
+    </div>
+   
+    </div>
+</nav>
+<!--<div class="container-fluid">
+	<div class="container">
+    	<div class="jumbotron ">
+    	<h2 class="one animated  bounceInDown">What is it ?</h2>
+		<p  class="one animated bounceInUp">It is a free website for transfering credits .</p>
+        <h2 class="two animated  bounceInDown">What is credit ?</h2>
+		<p class="two animated  bounceInUp"> Credit is sort of points which can be transferred from one user to another user .</p>
+        <h2 class="three animated  bounceInDown">How to use this?</h2>
+        <ul >
+        	<li class="four animated  bounceInUp"><p>Go to the 'View Users' tab to see the data of  all  users</p></li>
+            <!--<li class="five animated  bounceInUp" ><p>You can click on the user name's to get more information about the user</p></li>
+            <li class="six animated  bounceInUp" ><p>You can transfer credit to another user from that user</p></li>
+          
+          <li class="five animated  bounceInUp" ><p>Go to the 'Transfer Credit' tab to select the recipient and sender and transfer credit </p></li>
+            <li class="six animated  bounceInUp" ><p>Go to the 'Transfer History' tab to keep track of all transaction </p></li>
+            -->
+            <!--<li class="seven animated  bounceInUp"><p>You can also go to the 'Transfer Credit' tab to select both the recipient and sender </p></li>
+            <li class="eight animated  bounceInUp"><p>You can go to the 'Transfer History' tab to keep track of all transaction </p></li>-->
+       <!-- </ul>
+        <br>
+        <h3 class="seven text-center animated zoomIn">Hope , it will be helpful to you.</h3>
+	</div>
+    
+    </div>-->
+    
+    <div class="container-fluid">
+	<div class="container">
+    	<div class="jumbotron ">
+    <ul ><h4>
+    	<li class="one animated  bounceInDown">add <span>/users</span>   to get json data related all users</li>
+    	<li class="two animated  bounceInDown">add <span>/user/'Full Name'</span>   to get json data related to the user</li>
+    	<li class="three animated  bounceInDown">add <span>/users/id/'id'</span> to get json data related to the user having the specified id</li>
+    	<li class="four animated  bounceInDown">add <span>/history</span>  to get json data of all transaction</li>
+    	<li class="five animated  bounceInDown">add <span>/to/'Full Name'</span>  to get json data of all transaction to the specified user</li>
+    	<li class="six animated  bounceInDown">add <span>/from/'Full Name'</span>  to get json data of all transaction from the specified  user</li>
+    	<li class="seven animated  bounceInDown">add <span>/transfer/'From User'/'To User'/'Credit'</span>  to send specified credit from the specified user to the specified user</li>
+    </h4>
+    </ul>
+    </div></div></div>
+</body>
+</html>
