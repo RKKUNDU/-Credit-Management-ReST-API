@@ -14,3 +14,5 @@ https://tsftasks.000webhostapp.com/from/Rohit%20Kundu to view all the transactio
 
 https://tsftasks.000webhostapp.com/to/Rohit%20Kundu  to view all the transaction to the user
 
+If some invalid url is entered eg. https://tsftasks.000webhostapp.com/invalid  , then it will give some json response with message.  
+
