@@ -1,6 +1,13 @@
 <?php
 		header("content-type:application/json");
 		$con=mysqli_connect("localhost","id4871014_tsftasks","12345","id4871014_dummy_database");
+		if (!$con) 
+		{
+		    $response=array("Message"=>"Database not connected","Error"=>"No error .There is some internal fault.");
+    	    json_encode($response,JSON_PRETTY_PRINT);
+    	    return;
+    		
+        }
 		$sql="SELECT * FROM transfer";
 		$result=mysqli_query($con,$sql);
 		if($result->num_rows >0)
@@ -15,7 +22,7 @@
 							"Date"=>$row['dateTimeNow']);
 				array_push($history["history"],$hist);			
 			}			
-			echo json_encode($history);
+			echo json_encode($history,JSON_PRETTY_PRINT);
 		}
 			    
 ?>    	

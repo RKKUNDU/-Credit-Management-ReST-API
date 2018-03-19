@@ -27,7 +27,7 @@ header("content-type:application/json");
     		    $res=array("Message"=>"Use numbers only.","Error"=>"Invalid Credit");
     		    array_push($response,$res);
     		}
-    		echo json_encode($response);
+    		echo json_encode($response,JSON_PRETTY_PRINT);
     		return;
 		}
 	
@@ -38,7 +38,7 @@ header("content-type:application/json");
 		{
 			$res=array("Message"=>"Both sender and recipient is same","error"=>"error");
 			array_push($response,$res);
-			echo json_encode($response);
+			echo json_encode($response,JSON_PRETTY_PRINT);
 			return;
 		}
 		
@@ -48,12 +48,18 @@ header("content-type:application/json");
 		{
 			$res=array("Message"=>"Please Choose value of credit greater than zero","error"=>"error");
 			array_push($response,$res);
-        	echo json_encode($response);
+        	echo json_encode($response,JSON_PRETTY_PRINT);
 			return;
 		}
 //database coonection		
 		$con=mysqli_connect("localhost","id4871014_tsftasks","12345","id4871014_dummy_database");
-					
+		if (!$con) 
+		{
+		    $response=array("Message"=>"Database not connected","Error"=>"No error .There is some internal fault.");
+    	    json_encode($response,JSON_PRETTY_PRINT);
+    	    return;
+		
+        }			
 		$sender_credit=$recipient_credit=0;		
 		
 //query statement		
@@ -69,14 +75,14 @@ header("content-type:application/json");
 		{
 			$res=array("Message"=>"Sender does not exist","error"=>"Invalid Sender Name");
 			array_push($response,$res);
-			echo json_encode($response);
+			echo json_encode($response,JSON_PRETTY_PRINT);
 	return;
 		}
 		if($recipient_result->num_rows==0)
 		{
 			$res=array("Message"=>"Recipient does not exist","error"=>"Invalid Recipient Name");
 			array_push($response,$res);
-			echo json_encode($response);
+			echo json_encode($response,JSON_PRETTY_PRINT);
 			return;
 		}
 		
@@ -129,7 +135,7 @@ header("content-type:application/json");
 	    $res=array("Message"=>"Some values are missing","error"=>"error");
 			array_push($response,$res);
 	}
-	echo json_encode($response);
+	echo json_encode($response,JSON_PRETTY_PRINT);
 	function validate($data)
 	{
 	    $data=trim($data);
