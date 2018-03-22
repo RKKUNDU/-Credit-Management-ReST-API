@@ -16,3 +16,4 @@ https://tsftasks.000webhostapp.com/to/Rohit%20Kundu  to view all the transaction
 
 If some invalid url is entered eg. https://tsftasks.000webhostapp.com/invalid  , then it will give some json response with message.  
 
+http://tsftasks.000webhostapp.com/transfer/Rohit%20kundu/bill%20gates/5   to transfer credit from,to,credit amount respectively used.

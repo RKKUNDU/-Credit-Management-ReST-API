@@ -1,0 +1,13 @@
+
+# HTID:4476193: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:4476193:
+RewriteEngine On    # Turn on the rewriting engine
+RewriteRule ^users$ users.php [NC]
+RewriteRule ^history$ history.php [NC]
+RewriteRule ^user/([a-z\sA-Z0-9_-]+) user.php?name=$1 [NC]
+RewriteRule ^users/id/([a-zA-Z\s-_0-9]+) user_id.php?id=$1 [NC]
+Rewriterule ^from/([a-zA-Z\s0-9-_]+) from.php?from=$1 [NC]
+Rewriterule ^to/([a-zA-Z\s0-9-_]+) to.php?to=$1 [NC]
+rewriterule ^transfer/([a-zA-Z\s0-9-_]+)/([a-zA-Z\s0-9-_]+)/([a-zA-Z\s0-9-_]+) transfer.php?from=$1&to=$2&credit=$3 [NC]
+RewriteRule ^(?!users$|!history)([a-zA-Z\s0-9-_/]+)$ error.php [NC]
